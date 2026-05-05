@@ -1,0 +1,284 @@
+/* =============================================
+   À PROPOS
+   ============================================= */
+
+/* --- Intro : texte gauche, photo droite --- */
+.ap-intro {
+  padding-top: calc(var(--header-h) + 5rem);
+  padding-bottom: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: var(--color-white);
+}
+.ap-intro__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 5rem;
+}
+.ap-intro .section-label { display: block; margin-bottom: 0.8rem; }
+.ap-intro__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  color: var(--color-navy);
+  line-height: 1.15;
+  margin-bottom: 1.6rem;
+}
+.ap-intro__body {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+/* Photo en D (bords droits arrondis, bord gauche droit) */
+.ap-intro__portrait-wrap { flex-shrink: 0; }
+.ap-intro__portrait {
+  width: min(340px, 40vw);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 0 120px 120px 0;
+  display: block;
+  color: transparent;
+}
+
+
+/* --- Formation — grille horizontale avec logos --- */
+.ap-formation {
+  padding: 5rem 2rem;
+  background: var(--color-cream);
+}
+.ap-formation__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.formation-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.formation-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Logo établissement */
+.formation-item__logo-wrap {
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+.formation-item__logo {
+  max-height: 64px;
+  max-width: 140px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.formation-item__content { }
+.formation-item__school {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-navy);
+  margin-bottom: 0.15rem;
+}
+.formation-item__location {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--color-gold);
+  margin-bottom: 0.4rem;
+}
+.formation-item__degree {
+  font-size: 0.87rem;
+  opacity: 0.75;
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+.formation-item__years {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+}
+
+
+/* --- Expériences + Compétences --- */
+.ap-skills {
+  padding: 0 0 6rem;
+}
+.ap-skills__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+}
+
+.ap-skills__col-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* Colonne expériences — fond or */
+.ap-skills__col--exp {
+  background: var(--color-gold);
+  padding: 3rem 2.5rem 3rem 2rem;
+}
+.ap-skills__col--exp .ap-skills__col-title { color: var(--color-navy); }
+.ap-skills__col--exp .exp-item__company  { color: var(--color-navy); }
+.ap-skills__col--exp .exp-item__role     { color: var(--color-navy); opacity: 0.7; }
+.ap-skills__col--exp .exp-item__period   { color: var(--color-navy); opacity: 0.6; }
+.ap-skills__col--exp .exp-item__tasks li { color: var(--color-navy); opacity: 0.85; }
+.ap-skills__col--exp .exp-item__tasks li::before { color: var(--color-navy); }
+
+/* Séparateur vertical */
+.ap-skills__divider {
+  background: var(--color-gold);
+  opacity: 0.35;
+  width: 1px;
+  align-self: stretch;
+}
+
+/* Colonne compétences */
+.ap-skills__col--skills {
+  padding: 3rem 2rem 3rem 2.5rem;
+  background: var(--color-cream);
+}
+.ap-skills__col--skills .ap-skills__col-title { color: var(--color-navy); }
+
+/* Expériences */
+.exp-item__header { margin-bottom: 1rem; }
+.exp-item__company {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.exp-item__role {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  margin: 0.2rem 0;
+}
+.exp-item__period {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+.exp-item__tasks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.exp-item__tasks li {
+  font-size: 0.84rem;
+  line-height: 1.65;
+  padding-left: 1.1rem;
+  position: relative;
+}
+.exp-item__tasks li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+}
+
+/* Hard skills — texte avec pipes */
+.skills-group { margin-bottom: 2rem; }
+.skills-group__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.skills-pipe {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--color-navy);
+  opacity: 0.75;
+}
+
+/* Soft skills — paragraphes avec icône ✦ */
+.skills-expanded {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.skill-entry {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+.skill-entry__icon {
+  color: var(--color-gold);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+.skill-entry__title {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0.25rem;
+}
+.skill-entry__desc {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--color-navy);
+  opacity: 0.7;
+}
+
+
+/* --- CTA Parcours --- */
+.ap-skills__cta {
+  text-align: center;
+  padding: 3.5rem 2rem 6rem;
+  background: var(--color-white);
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .ap-intro {
+    padding-top: calc(var(--header-main-h) + 2.5rem);
+  }
+  .ap-intro__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  /* Photo en premier sur mobile */
+  .ap-intro__portrait-wrap { order: -1; }
+  .ap-intro__portrait {
+    width: min(260px, 80%);
+    border-radius: 0 80px 80px 0;
+  }
+
+  .formation-list { grid-template-columns: 1fr; }
+
+  .ap-skills__inner {
+    grid-template-columns: 1fr;
+  }
+  .ap-skills__col--exp { padding: 2.5rem 2rem; }
+  .ap-skills__col--skills { padding: 2.5rem 2rem; }
+  .ap-skills__divider { display: none; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ap-intro__inner { gap: 3rem; }
+  .ap-intro__portrait { width: min(280px, 38vw); }
+  .formation-list { grid-template-columns: 1fr 1fr; }
+}

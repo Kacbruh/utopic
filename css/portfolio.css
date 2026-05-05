@@ -1,0 +1,266 @@
+/* =============================================
+   PORTFOLIO HUB
+   ============================================= */
+
+.portfolio-hub {
+  padding-top: calc(var(--header-h) + 5rem);
+  padding-bottom: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: var(--color-white);
+  min-height: 100vh;
+}
+.portfolio-hub__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.portfolio-hub__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.portfolio-hub__title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 600;
+  color: var(--color-navy);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.portfolio-hub__subtitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grille 3 cartes */
+.portfolio-hub__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  min-width: 0;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.hub-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(18,38,62,0.14);
+}
+
+.hub-card__img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  flex-shrink: 0;
+}
+.hub-card__img-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  color: transparent;
+}
+.hub-card:hover .hub-card__img-wrap img { transform: scale(1.05); }
+
+.hub-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(18,38,62,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.hub-card:hover .hub-card__overlay { opacity: 1; }
+.hub-card__cta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  border: 1.5px solid var(--color-white);
+  padding: 0.55rem 1.4rem;
+}
+
+.hub-card__body {
+  padding: 1.2rem;
+  background: var(--color-cream);
+  flex: 1;
+}
+.hub-card__title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0.25rem;
+}
+.hub-card__sub {
+  font-size: 0.78rem;
+  color: var(--color-text);
+  opacity: 0.6;
+  font-style: italic;
+}
+
+
+/* =============================================
+   SECTION RÉSEAUX SOCIAUX — vague navy
+   ============================================= */
+.portfolio-social {
+  position: relative;
+  padding: 6rem 2rem 0;
+  background: var(--color-cream);
+  overflow: hidden;
+  min-height: 520px;
+}
+
+/* Vague navy qui couvre la moitié inférieure */
+.portfolio-social__wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52%;
+  background: var(--color-navy);
+  clip-path: ellipse(120% 100% at 50% 100%);
+  z-index: 0;
+}
+
+.portfolio-social__inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+}
+
+/* Texte (gauche) — au-dessus de la vague */
+.portfolio-social__text {
+  padding-bottom: 5rem;
+}
+.portfolio-social__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.5vw, 3.5rem);
+  font-weight: 600;
+  color: var(--color-navy);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.portfolio-social__body {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  opacity: 0.75;
+  margin-bottom: 2rem;
+}
+.portfolio-social__cta {
+  display: inline-block;
+}
+
+/* Mockup (droite) — déborde sur la vague */
+.portfolio-social__mockup {
+  display: flex;
+  justify-content: center;
+}
+.portfolio-social__mockup img {
+  width: 100%;
+  max-width: 440px;
+  display: block;
+  color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =============================================
+   SOUS-PAGES PORTFOLIO (grille projets)
+   ============================================= */
+
+.portfolio-sub {
+  padding-top: calc(var(--header-h) + 5rem);
+  padding-bottom: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: var(--color-white);
+  min-height: 100vh;
+}
+.portfolio-sub__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.portfolio-sub__header { margin-bottom: 3rem; text-align: center; }
+.portfolio-sub__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  opacity: 0.5;
+  margin-bottom: 2rem;
+  transition: opacity var(--transition), color var(--transition);
+}
+.portfolio-sub__back:hover { opacity: 1; color: var(--color-gold); }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.project-item {
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 4/3;
+  background: var(--color-cream);
+}
+.project-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  color: transparent;
+}
+.project-item:hover img { transform: scale(1.04); }
+
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 768px) {
+  .portfolio-hub { padding-top: calc(var(--header-main-h) + 2.5rem); }
+  .portfolio-hub__grid { grid-template-columns: 1fr; }
+
+  .portfolio-social__inner { grid-template-columns: 1fr; gap: 2rem; }
+  .portfolio-social__text { padding-bottom: 2rem; }
+  .portfolio-social__wave { height: 40%; }
+
+  .portfolio-sub { padding-top: calc(var(--header-main-h) + 2.5rem); }
+  .projects-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .portfolio-hub__grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-social__inner { gap: 3rem; }
+  .portfolio-social__text { padding-bottom: 4rem; }
+}

@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m http.server 8080)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8080/index.html)",
+      "Bash(curl -L -o 'C:\\\\Documents\\\\Projects\\\\Startup\\\\ClaudeCode\\\\CleaPortfolio\\\\utopic\\\\assets\\\\logos\\\\logo-utopic.png' 'https://static.wixstatic.com/media/594907_baf32534233144f9b0d2f11964ee949c~mv2.png' --user-agent Mozilla/5.0 -s -w '%{http_code} %{size_download}b\\\\n')",
+      "Bash(curl -L -o 'C:\\\\Documents\\\\Projects\\\\Startup\\\\ClaudeCode\\\\CleaPortfolio\\\\utopic\\\\assets\\\\logos\\\\logo-utopic-mini.png' 'https://static.wixstatic.com/media/594907_7f0e420f392f48dc97ede12c7d854b73~mv2.png' --user-agent Mozilla/5.0 -s -w '%{http_code} %{size_download}b\\\\n')",
+      "Bash(curl -L -o 'C:\\\\Documents\\\\Projects\\\\Startup\\\\ClaudeCode\\\\CleaPortfolio\\\\utopic\\\\assets\\\\images\\\\portrait-clea.png' 'https://static.wixstatic.com/media/594907_bef66fc3cae04b7889babc901d31aecc~mv2.png' --user-agent Mozilla/5.0 -s -w '%{http_code} %{size_download}b\\\\n')",
+      "Bash(wait)",
+      "Bash(curl -L -o 'C:\\\\Documents\\\\Projects\\\\Startup\\\\ClaudeCode\\\\CleaPortfolio\\\\utopic\\\\assets\\\\images\\\\presta-identite.jpg' 'https://static.wixstatic.com/media/594907_18c3208ba2944c37a4f77a23463cb005~mv2.jpg' --user-agent Mozilla/5.0 -s -w '%{http_code} %{size_download}b\\\\n')",
+      "Bash(curl -L -o 'C:\\\\Documents\\\\Projects\\\\Startup\\\\ClaudeCode\\\\CleaPortfolio\\\\utopic\\\\assets\\\\images\\\\presta-print.jpg' 'https://static.wixstatic.com/media/594907_9901e7af70bf48b09f4958a14477c862~mv2.jpg' --user-agent Mozilla/5.0 -s -w '%{http_code} %{size_download}b\\\\n')",
+      "Bash(curl -L -o 'C:\\\\Documents\\\\Projects\\\\Startup\\\\ClaudeCode\\\\CleaPortfolio\\\\utopic\\\\assets\\\\images\\\\presta-digitale.jpeg' 'https://static.wixstatic.com/media/594907_fd8ca46744b14ddcbd11047f720ee332~mv2.jpeg' --user-agent Mozilla/5.0 -s -w '%{http_code} %{size_download}b\\\\n')",
+      "Bash(curl -L -o 'C:\\\\Documents\\\\Projects\\\\Startup\\\\ClaudeCode\\\\CleaPortfolio\\\\utopic\\\\assets\\\\images\\\\presse-votre-agglo.jpg' 'https://static.wixstatic.com/media/594907_618392f476864492aa86940c8e97a509~mv2.jpg' --user-agent Mozilla/5.0 -s -w '%{http_code} %{size_download}b\\\\n')",
+      "Bash(curl *)",
+      "WebFetch(domain:contact3166073.wixsite.com)",
+      "Bash(python -m http.server 8080 --bind 127.0.0.1)",
+      "Bash(python *)"
+    ]
+  }
+}

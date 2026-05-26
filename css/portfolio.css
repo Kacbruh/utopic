@@ -133,19 +133,20 @@
    ============================================= */
 .portfolio-social {
   position: relative;
-  padding: 6rem 2rem 0;
   background: var(--color-cream);
   overflow: hidden;
-  min-height: 520px;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
 }
 
-/* Vague navy qui couvre la moitié inférieure */
+/* Bloc navy absolu en bas avec SVG Bézier en haut */
 .portfolio-social__wave {
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
-  height: 85%;
+  width: 100%;
+  height: 75%;
   background: var(--color-navy);
   z-index: 0;
 }
@@ -153,17 +154,17 @@
 .portfolio-social__inner {
   position: relative;
   z-index: 1;
-  max-width: var(--max-w);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: end;
+  padding: 3rem 4rem;
 }
 
-/* Texte (gauche) — au-dessus de la vague */
 .portfolio-social__text {
-  padding-bottom: 5rem;
+  flex: 0 0 45%;
+  z-index: 1;
 }
 .portfolio-social__title {
   font-family: var(--font-display);
@@ -184,8 +185,11 @@
   display: inline-block;
 }
 
-/* Mockup (droite) — déborde sur la vague */
+/* Mockup (droite) */
 .portfolio-social__mockup {
+  flex: 1;
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
 }

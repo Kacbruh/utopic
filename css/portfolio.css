@@ -147,7 +147,6 @@
   right: 0;
   height: 85%;
   background: var(--color-navy);
-  clip-path: polygon(0 100%, 15% 97%, 30% 88%, 45% 65%, 55% 35%, 70% 12%, 85% 3%, 100% 0%, 100% 100%);
   z-index: 0;
 }
 

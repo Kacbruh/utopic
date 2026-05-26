@@ -18,6 +18,10 @@
   text-align: center;
   margin-bottom: 4rem;
 }
+.contact-page__header .section-label {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
 
 /* Layout 2 colonnes */
 .contact-layout {

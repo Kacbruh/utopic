@@ -143,8 +143,8 @@
 .portfolio-social__content {
   position: relative;
   z-index: 2;
-  width: 45%;
-  padding: 60px 0 60px 80px;
+  width: 40%;
+  padding: 60px 0 60px 60px;
 }
 
 .portfolio-social__label {
@@ -194,11 +194,11 @@
 }
 
 .portfolio-social__wave {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 70%;
-  height: 100%;
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 65% !important;
+  height: 100% !important;
   background: #12263e;
   overflow: visible;
 }
@@ -284,9 +284,9 @@
   .portfolio-hub { padding-top: calc(var(--header-main-h) + 2.5rem); }
   .portfolio-hub__grid { grid-template-columns: 1fr; }
 
-  .portfolio-social__inner { grid-template-columns: 1fr; gap: 2rem; }
-  .portfolio-social__text { padding-bottom: 2rem; }
-  .portfolio-social__wave { height: 40%; }
+  .portfolio-social { flex-direction: column; min-height: auto; }
+  .portfolio-social__content { width: 100%; padding: 40px 24px; }
+  .portfolio-social__wave { position: relative !important; width: 100% !important; height: 400px !important; }
 
   .portfolio-sub { padding-top: calc(var(--header-main-h) + 2.5rem); }
   .projects-grid { grid-template-columns: 1fr; }
@@ -294,6 +294,5 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   .portfolio-hub__grid { grid-template-columns: repeat(2, 1fr); }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
-  .portfolio-social__inner { gap: 3rem; }
-  .portfolio-social__text { padding-bottom: 4rem; }
+  .portfolio-social__content { padding: 40px 24px 40px 40px; }
 }

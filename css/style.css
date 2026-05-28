@@ -928,6 +928,21 @@ ul { list-style: none; }
   .presse-card__img-wrap { aspect-ratio: 16/9; }
   .carousel__slide--presse { flex: 0 0 100%; }
   .avis-card { padding: 2rem 1.5rem; }
+
+  /* Portfolio social — mobile */
+  .portfolio-social > div { flex-direction: column !important; padding: 40px 24px !important; min-height: auto !important; }
+  .portfolio-social > div > div:first-child { width: 100% !important; text-align: center; }
+  .portfolio-social > div > div:last-child { width: 100% !important; height: 220px !important; margin-top: 1.5rem; }
+  .portfolio-social img { width: 160px !important; right: 50% !important; transform: translateX(50%) rotate(-8deg) !important; top: 50% !important; }
+
+  /* À propos */
+  .ap-intro { flex-direction: column; }
+  .ap-intro__photo { width: 100%; max-width: 280px; margin: 0 auto 2rem; }
+  .ap-skills { flex-direction: column; }
+  .ap-skills__col { width: 100%; }
+
+  /* Sub-pages */
+  .sub-hero__title { font-size: clamp(2.5rem, 10vw, 5rem) !important; }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -935,6 +950,10 @@ ul { list-style: none; }
   .prestations__stagger { grid-template-columns: repeat(2, 1fr); }
   .presta-item:nth-child(1),
   .presta-item:nth-child(3) { margin-top: 1.5rem; }
+
+  /* Portfolio social — tablet */
+  .portfolio-social > div { padding: 40px 40px !important; }
+  .portfolio-social > div > div:first-child { width: 45% !important; }
 }
 
 /* ===== PORTFOLIO SOCIAL ===== */

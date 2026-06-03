@@ -7,7 +7,7 @@
   --green:  #334b35;
   --teal:   #00756f;
   --coral:  #fe6751;
-  --yellow: #e9a708;
+  --yellow: #c9a708;
   --beige:  #ccc0b3;
   --cream:  #f5eee6;
   --white:  #ffffff;
@@ -123,6 +123,7 @@
   color: var(--teal);
   margin-bottom: 0.3rem;
 }
+.card-essentiel .network { color: #12263e !important; }
 .card-excellence .network { color: var(--navy); }
 .card-signature .network { color: var(--coral); }
 
@@ -227,6 +228,17 @@ table.seo tbody tr:hover td { background: rgba(18,38,62,0.02); }
   color: var(--navy);
   text-align: right;
   white-space: nowrap;
+}
+
+/* Typographie scoped Playfair Display + Nunito */
+.tarifs-wrapper {
+  font-family: 'Nunito', sans-serif;
+}
+.tarifs-wrapper h1,
+.tarifs-wrapper h2,
+.tarifs-wrapper .formula-name,
+.tarifs-wrapper .page-title {
+  font-family: 'Playfair Display', serif;
 }
 
 /* Responsive */

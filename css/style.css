@@ -44,13 +44,15 @@
    RESET
    ============================================= */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: var(--font-body);
   font-weight: 147;
   color: var(--color-text);
   background: var(--color-white);
   line-height: 1.6;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 img { display: block; max-width: 100%; height: auto; }
 a { text-decoration: none; color: inherit; }
@@ -963,6 +965,59 @@ ul { list-style: none; }
   .prestations__title { font-size: clamp(1.4rem, 6vw, 2.2rem); }
   .experiences-intro .section-title,
   .experiences-intro h2 { font-size: clamp(1.1rem, 4.5vw, 1.6rem); white-space: nowrap; }
+
+  /* Fix 2 — Header pleine largeur */
+  .site-header,
+  .header-main,
+  .header-main__inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* Fix 3 — Footer */
+  .site-footer { width: 100%; overflow-x: hidden; }
+  .footer-main__inner { padding: 32px 20px; width: 100%; box-sizing: border-box; }
+  .footer-nav-block__cols { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 6px 12px; width: 100%; }
+  .footer-nav-block__cols a { font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+  .footer-nav-block__cols a[href*="politique"],
+  .footer-nav-block__cols a[href*="confidentialite"] { font-size: 10px; }
+
+  /* Fix 4 — Sections */
+  section,
+  .ap-skills,
+  .ap-skills__col,
+  .ap-skills__col--skills,
+  .skills-expanded,
+  .ap-formation,
+  .exp-box,
+  .realisations,
+  .prestations,
+  .experiences-carousel,
+  .contact-section,
+  .contact-grid,
+  .portfolio-social {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  /* Fix 5 — Hard Skills */
+  .skills-group,
+  .hard-skills-list,
+  [class*="skill"] {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    word-break: break-word;
+    white-space: normal !important;
+  }
+
+  /* Fix 6 — Media */
+  img, video, iframe, svg { max-width: 100%; height: auto; }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
